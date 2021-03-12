@@ -17,6 +17,7 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.mypackage.colorpalette",
       "supportsTablet": true
     },
     "android": {

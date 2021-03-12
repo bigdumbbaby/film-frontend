@@ -12,8 +12,11 @@ export default function PaletteSwatch({ color }) {
 
 const styles = StyleSheet.create({
   circle: {
-    width: 10,
-    height: 10,
+    width: 35,
+    height: 35,
     borderRadius: 100 / 2,
+    borderColor: 'rgb(0,0,0)',
+    borderWidth: 2,
+    padding: 10
   },
 });

@@ -1,21 +1,21 @@
 import React from 'react'
-import { SafeAreaView, TextInput} from 'react-native'
+import { SafeAreaView, TextInput, View} from 'react-native'
 import { useEffect, useState } from 'react'
 import { SearchBar } from 'react-native-elements';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Main from './Main'
 import Search from './Search'
+import Camera from './Camera'
 
 
 
-export default function FilmPage() {
+export default function FilmPage({ handleUploadClick }) {
 
   const [search, setSearch] = useState("")
 
 
   function updateSearch(searchInput){
     setSearch(searchInput)
-    console.log(search)
   }
 
   return (
@@ -26,7 +26,7 @@ export default function FilmPage() {
         value={search}
         />
       {search === ""
-        ? <Main />
+        ? <Main handleUploadClick={handleUploadClick}/>
         : <Search search={search}/>
       }
     </SafeAreaProvider>
